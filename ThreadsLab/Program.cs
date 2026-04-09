@@ -1,25 +1,36 @@
-﻿namespace ThreadsLab
+﻿using System.Net.Sockets;
+
+namespace ThreadsLab
 {
     class Program
     {
-        static void WriteSecond()
+        static int x = 0;
+       static  object locker = new();  // объект-заглушка
+        static void Print()
         {
-            while (true)
+            lock (locker)
             {
-                Console.WriteLine(new String(' ', 10) + "Вторичный");
+                x = 1;
+                for (int i = 1; i < 6; i++)
+                {
+                    Console.WriteLine($"{Thread.CurrentThread.Name}: {x}");
+                    x++;
+                    Thread.Sleep(100);
+                }
             }
         }
 
         static void Main(string[] args)
         {
-            ThreadStart writeSecond = new ThreadStart(WriteSecond);
-            Thread thread = new Thread(writeSecond);
-            thread.Start();
 
-            while (true)
+            // запускаем пять потоков
+            for (int i = 1; i < 6; i++)
             {
-                Console.WriteLine("Первичный");
+                Thread myThread = new(Print);
+                myThread.Name = $"Поток {i}";   // устанавливаем имя для каждого потока
+                myThread.Start();
             }
+
         }
     }
 }
