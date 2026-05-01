@@ -8,4 +8,34 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Remove="Properties\Resources.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\galaxys6.jpg" />
+    <None Remove="Images\iphone6s.jpg" />
+    <None Remove="Images\lumia950.jpg" />
+    <None Remove="Images\nexus5x.jpg" />
+    <None Remove="nodes.xml" />
+    <None Remove="phones.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.142" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\galaxys6.jpg" />
+    <Resource Include="Images\iphone6s.jpg" />
+    <Resource Include="Images\lumia950.jpg" />
+    <Resource Include="Images\nexus5x.jpg" />
+    <Resource Include="nodes.xml" />
+    <Resource Include="phones.xml" />
+    <Resource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </Resource>
+  </ItemGroup>
+
 </Project>

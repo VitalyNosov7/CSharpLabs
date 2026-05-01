@@ -1,5 +1,9 @@
 <Solution>
+  <Project Path="MVVMSQliteLab/MVVMSQliteLab.csproj" Id="8813979a-53ec-4438-b07d-f50d0a35eeae" />
   <Project Path="NetLab/NetLab.csproj" />
+  <Project Path="SQLiteLab/SQLiteLab.csproj" Id="8f96b7dc-6548-4697-8277-92c641ca38e8" />
   <Project Path="ThreadsLab/ThreadsLab.csproj" Id="44946caf-abd4-4321-aceb-43c16c8b4efa" />
+  <Project Path="WPFHostLab/WPFHostLab.csproj" Id="90431578-c096-4198-a278-3c930779f691" />
   <Project Path="WPFLabs/WPFLabs.csproj" Id="1131a68a-82b6-4e62-a55d-5634d6fcbdec" />
+  <Project Path="WPFScrutiniLab/WPFScrutiniLab.csproj" Id="6f0fc491-b509-40f5-9a72-366dbffc9242" />
 </Solution>
