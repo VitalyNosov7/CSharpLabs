@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFScrutiniLab"
         mc:Ignorable="d"
-        Title="CalcBooking"  Width="800" Height="600">
-    <Grid>
-
-    </Grid>
+        Title="CalcBooking"  Width="800" Height="600" WindowState="Normal">
+    
+    <DockPanel LastChildFill="True" Margin="5">
+        <Grid Name="GridTop1" DockPanel.Dock="Top" Background="Tan" Width="Auto" Height="30"/>
+        <Grid Name="GridTop2" DockPanel.Dock="Top" Background="AliceBlue" Width="Auto" Height="50"/>
+        <Grid Name="GridBottom" DockPanel.Dock="Bottom" Background="BlanchedAlmond" Width="Auto" Height="30"/>
+        <Grid Name="GridLeft" DockPanel.Dock="Left" Background="Aquamarine" Width="100" Height="Auto"/>
+        <Grid Name="GridCenter" Background="LightGreen">
+            <TextBlock  Text="Центр" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+    </DockPanel>
 </Window>
