@@ -7,45 +7,20 @@
         mc:Ignorable="d"
         Title="CalcBooking"  Width="800" Height="600" WindowState="Normal">
 
-    <Window.Resources>
-        <ControlTemplate  TargetType="TabControl" x:Key="tabControlTemplate">
-            <TabControl x:Name="products">
-                <TabItem x:Name="smartphonesTab">
-                    <TabItem.Header>
-                        <StackPanel Orientation="Horizontal">
-                            <Ellipse Height="10" Width="10" Fill="Black" />
-                            <TextBlock Margin="3">Смартфоны</TextBlock>
-                        </StackPanel>
-                    </TabItem.Header>
-                    <TabItem.Content>
-                        <StackPanel>
-                            <RadioButton IsChecked="True">iPhone S6</RadioButton>
-                            <RadioButton>LG G 4</RadioButton>
-                            <RadioButton>Lumia 550</RadioButton>
-                        </StackPanel>
-                    </TabItem.Content>
-                </TabItem>
-                <TabItem x:Name="tabletsTab">
-                    <TabItem.Header>
-                        <StackPanel Orientation="Horizontal">
-                            <Rectangle Height="0" Width="10" Fill="Black" />
-                            <TextBlock Margin="3">Планшеты</TextBlock>
-                        </StackPanel>
-                    </TabItem.Header>
-                </TabItem>
-            </TabControl>
-        </ControlTemplate>
-    </Window.Resources>
+	<Window.Resources>
 
-    <DockPanel LastChildFill="True" Margin="5">
-        <Grid Name="GridTop1" DockPanel.Dock="Top" Background="Tan" Width="Auto" Height="30"/>
-        <Grid Name="GridTop2" DockPanel.Dock="Top" Background="AliceBlue" Width="Auto" Height="50"/>
-        <Grid Name="GridBottom" DockPanel.Dock="Bottom" Background="BlanchedAlmond" Width="Auto" Height="30"/>
-        <Grid Name="GridLeft" DockPanel.Dock="Left" Background="Aquamarine" Width="100" Height="Auto"/>
+	</Window.Resources>
 
-
-        <Grid Name="GridCenter" Background="LightGreen">
-            <TabControl x:Name="products" Template="{StaticResource tabControlTemplate}"></TabControl>
-        </Grid>
-    </DockPanel>
+	<DockPanel LastChildFill="True" Margin="5">
+		<Grid Name="GridTop1" DockPanel.Dock="Top" Background="Tan" Width="Auto" Height="30"/>
+		<Grid Name="GridTop2" DockPanel.Dock="Top" Background="AliceBlue" Width="Auto" Height="50"/>
+		<Grid Name="GridBottom" DockPanel.Dock="Bottom" Background="BlanchedAlmond" Width="Auto" Height="30"/>
+		<Grid Name="GridLeft" DockPanel.Dock="Left" Background="Aquamarine" Width="100" Height="Auto">
+			<Button Content="Add" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top" Height="27" Width="74" Click="Button_Click"/>
+			<Button Content="Del" HorizontalAlignment="Left" Margin="15,61,0,0" VerticalAlignment="Top" Height="34" Width="64" Click="Button_Click_1"/>
+		</Grid>
+		<Grid Name="GridCenter" Background="LightGreen">
+			<TabControl x:Name="products" ></TabControl>
+		</Grid>
+	</DockPanel>
 </Window>
