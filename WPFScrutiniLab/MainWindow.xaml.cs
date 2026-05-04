@@ -19,6 +19,25 @@ namespace WPFScrutiniLab
         public MainWindow()
         {
             InitializeComponent();
+
+            #region Пример добавления табов в C#
+
+            // формируем содержимое вкладки в виде списка
+            ListBox notesList = new ListBox();
+            notesList.Items.Add("Macbook Pro");
+            notesList.Items.Add("HP Pavilion 5478");
+            notesList.Items.Add("Acer LK-08");
+            // добавление вкладки
+            
+            products.Items.Add(new TabItem
+            {
+                Header = new TextBlock { Text = "Ноутбуки" }, // установка заголовка вкладки
+                Content = notesList // установка содержимого вкладки
+            });
+
+            #endregion Пример добавления табов в C#
         }
+
+
     }
 }
