@@ -7,20 +7,20 @@
         mc:Ignorable="d"
         Title="CalcBooking"  Width="800" Height="600" WindowState="Normal">
 
-	<Window.Resources>
+    <Window.Resources>
 
-	</Window.Resources>
+    </Window.Resources>
 
-	<DockPanel LastChildFill="True" Margin="5">
-		<Grid Name="GridTop1" DockPanel.Dock="Top" Background="Tan" Width="Auto" Height="30"/>
-		<Grid Name="GridTop2" DockPanel.Dock="Top" Background="AliceBlue" Width="Auto" Height="50"/>
-		<Grid Name="GridBottom" DockPanel.Dock="Bottom" Background="BlanchedAlmond" Width="Auto" Height="30"/>
-		<Grid Name="GridLeft" DockPanel.Dock="Left" Background="Aquamarine" Width="100" Height="Auto">
-			<Button Content="Add" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top" Height="27" Width="74" Click="Button_Click"/>
-			<Button Content="Del" HorizontalAlignment="Left" Margin="15,61,0,0" VerticalAlignment="Top" Height="34" Width="64" Click="Button_Click_1"/>
-		</Grid>
-		<Grid Name="GridCenter" Background="LightGreen">
-			<TabControl x:Name="products" ></TabControl>
-		</Grid>
-	</DockPanel>
+    <DockPanel LastChildFill="True" Margin="5">
+        <Grid Name="GridTop1" DockPanel.Dock="Top" Background="Tan" Width="Auto" Height="30"/>
+        <Grid Name="GridTop2" DockPanel.Dock="Top" Background="AliceBlue" Width="Auto" Height="50"/>
+        <Grid Name="GridBottom" DockPanel.Dock="Bottom" Background="BlanchedAlmond" Width="Auto" Height="30"/>
+        <Grid Name="GridLeft" DockPanel.Dock="Left" Background="Aquamarine" Width="100" Height="Auto">
+            <Button Content="Add" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top" Height="27" Width="74" Click="AddTabItem"/>
+            <Button Content="Del" HorizontalAlignment="Left" Margin="15,61,0,0" VerticalAlignment="Top" Height="34" Width="64" Click="DelTabItem"/>
+        </Grid>
+        <Grid Name="GridCenter" Background="LightGreen">
+
+        </Grid>
+    </DockPanel>
 </Window>

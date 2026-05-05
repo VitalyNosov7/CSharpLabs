@@ -16,11 +16,17 @@ namespace WPFScrutiniLab
     /// </summary>
     public partial class MainWindow : Window
     {
+        TabControl tabControl = new TabControl();
+        
+
+
         public MainWindow()
         {
             InitializeComponent();
 
-
+            
+            
+            GridCenter.Children.Add(tabControl);
 
             #region Пример добавления табов в C#
 
@@ -30,7 +36,7 @@ namespace WPFScrutiniLab
             //notesList.Items.Add("HP Pavilion 5478");
             //notesList.Items.Add("Acer LK-08");
             //// добавление вкладки
-            
+
             //products.Items.Add(new TabItem
             //{
             //    Header = new TextBlock { Text = "Ноутбуки" }, // установка заголовка вкладки
@@ -40,29 +46,39 @@ namespace WPFScrutiniLab
             #endregion Пример добавления табов в C#
         }
 
-		private void Button_Click(object sender, RoutedEventArgs e)
+		private void AddTabItem(object sender, RoutedEventArgs e)
 		{
-			// формируем содержимое вкладки в виде списка
-			ListBox notesList = new ListBox();
-			notesList.Items.Add("Macbook Pro");
-			notesList.Items.Add("HP Pavilion 5478");
-			notesList.Items.Add("Acer LK-08");
+            // формируем содержимое вкладки в виде списка
+            //ListBox notesList = new ListBox();
+            //notesList.Items.Add("Macbook Pro");
+            //notesList.Items.Add("HP Pavilion 5478");
+            //notesList.Items.Add("Acer LK-08");
             // добавление вкладки
 
-            products.Items.Add(new TabItem
-            {
-                Header = new TextBlock { Text = "Ноутбуки" }, // установка заголовка вкладки
-                Content = notesList // установка содержимого вкладки
-            });
+            //products.Items.Add(new TabItem
+            //{
+            //    Header = new TextBlock { Text = "Ноутбуки" }, // установка заголовка вкладки
+            //    Content = notesList // установка содержимого вкладки
+            //});
+            TabItem tabItem = new TabItem();
+            tabItem.Header = "Мой ТАБ";
+            tabControl.Items.Add(tabItem);
+            //tabItem.Header = "Мой ТАБ";
+
         }
 
-		private void Button_Click_1(object sender, RoutedEventArgs e)
+		private void DelTabItem(object sender, RoutedEventArgs e)
 		{
-			products.Items.RemoveAt(products.SelectedIndex);
+            //products.Items.RemoveAt(products.SelectedIndex);
 
-			TabItem current = (TabItem)products.SelectedItem;    
+            TabItem current = (TabItem)tabControl.SelectedItem;
+            current.Visibility = Visibility.Collapsed;
+       
 
-		//	current.Visibility = Visibility.Collapsed;
-		}
+            // tabControl.Items.Remove(tabControl.SelectedItem);
+
+
+
+        }
 	}
 }
