@@ -20,7 +20,25 @@
             <Button Content="Del" HorizontalAlignment="Left" Margin="15,61,0,0" VerticalAlignment="Top" Height="34" Width="64" Click="DelTabItem"/>
         </Grid>
         <Grid Name="GridCenter" Background="LightGreen">
+            <TabControl x:Name="tabControl">
+                <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Height="10" Width="10" Fill="Black" />
+                        <TextBlock Margin="3">Стартовый  таб</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                    <DockPanel Margin="5" LastChildFill="True">
+                        <Grid DockPanel.Dock="Left" Background="Aquamarine" Width="100" Height="Auto">
+                            <StackPanel  Orientation="Horizontal">
 
+                            </StackPanel>
+                        </Grid>
+                       
+                        
+                    </DockPanel>
+                </TabItem>
+            </TabControl>
         </Grid>
     </DockPanel>
 </Window>
