@@ -30,8 +30,8 @@ namespace WPFScrutiniLab
 		{
             TabItem tabItem = new TabItem();
             StackPanel stackPanel = new StackPanel();
-            Ellipse ellipse = new Ellipse() { Height = 10, Width=10, Fill=Brushes.Black };
-            TextBlock textBlock = new TextBlock() { Margin = new Thickness(3), Text = "Программный Таб"} ;
+            Ellipse ellipse = new Ellipse() { Height = 10, Width = 10, Fill = Brushes.Black };
+            TextBlock textBlock = new TextBlock() { Margin = new Thickness(3), Text = "Программный Таб" };
 
             stackPanel.Orientation = Orientation.Horizontal;
             stackPanel.Children.Add(ellipse);
@@ -41,6 +41,8 @@ namespace WPFScrutiniLab
 
             tabControl.Items.Add(tabItem);
             tabItem.IsSelected = true;
+
+
         }
 
 		private void DelTabItem(object sender, RoutedEventArgs e)
@@ -48,7 +50,12 @@ namespace WPFScrutiniLab
             //products.Items.RemoveAt(products.SelectedIndex);
 
             TabItem current = (TabItem)tabControl.SelectedItem;
-            current.Visibility = Visibility.Collapsed;  
+            current.Visibility = Visibility.Collapsed;
+            tabItemStart.Visibility = Visibility.Collapsed;
+
+
+
+
         }
 	}
 }
