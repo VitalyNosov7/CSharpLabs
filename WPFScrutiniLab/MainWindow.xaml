@@ -8,7 +8,9 @@
         Title="CalcBooking"  Width="800" Height="600" WindowState="Normal">
 
     <Window.Resources>
-
+        <!--<Visibility x:Key="VisibleResource">Visible</Visibility>
+        <Visibility x:Key="CollapsedResource">Collapsed</Visibility>
+        <Visibility x:Key="HiddenResource">Hidden</Visibility>-->
     </Window.Resources>
 
     <DockPanel LastChildFill="True" Margin="5">
@@ -21,7 +23,7 @@
         </Grid>
         <Grid Name="GridCenter" Background="LightGreen">
 
-            <TabControl x:Name="tabControl">
+            <!--<TabControl x:Name="tabControl">
 
 
                 <TabItem x:Name="tabItemStart">
@@ -71,7 +73,7 @@
 
                 </TabItem>
 
-            </TabControl>
+            </TabControl>-->
 
 
 
