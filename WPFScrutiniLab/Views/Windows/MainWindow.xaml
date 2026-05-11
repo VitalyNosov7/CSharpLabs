@@ -1,4 +1,4 @@
-﻿<Window x:Class="WPFScrutiniLab.MainWindow"
+﻿<Window x:Class="WPFScrutiniLab.Views.Windows.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -21,7 +21,7 @@
             <Button Content="Add" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top" Height="27" Width="74" Click="AddTabItem"/>
             <Button Content="Del" HorizontalAlignment="Left" Margin="15,61,0,0" VerticalAlignment="Top" Height="34" Width="64" Click="DelTabItem"/>
         </Grid>
-        <Grid Name="GridCenter" Background="LightGreen">
+        <Grid x:Name="GridCenter" Background="LightGreen">
 
             <!--<TabControl x:Name="tabControl">
 
