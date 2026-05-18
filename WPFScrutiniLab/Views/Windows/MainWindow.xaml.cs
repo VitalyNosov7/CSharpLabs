@@ -1,4 +1,6 @@
 ﻿using System.Windows;
+using WPFScrutiniLab.Models;
+using WPFScrutiniLab.ViewModels;
 
 
 namespace WPFScrutiniLab.Views.Windows
@@ -22,6 +24,9 @@ namespace WPFScrutiniLab.Views.Windows
 
             //gridCentr.Name = "GridCenter";
             //GridCenter.Children.Add(tabControl);
+
+            DataContext = new PersonViewModel();
+         // DataContext = new ApplicationViewModel();
         }
 
         private void AddTabItem(object sender, RoutedEventArgs e)

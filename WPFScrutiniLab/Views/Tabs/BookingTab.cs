@@ -1,6 +1,4 @@
 ﻿using System.Windows.Controls;
-using System.Windows;
-
 
 namespace WPFScrutiniLab.Views.Tabs
 {
@@ -14,7 +12,7 @@ namespace WPFScrutiniLab.Views.Tabs
         public BookingTab()
         {
             gridCentr = new Grid() { Name = "GridCenter" };
-            GridCenter.Children.Add(tabControl);
+           // GridCenter.Children.Add(tabControl);
         }
     }
 }
